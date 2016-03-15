@@ -1,5 +1,5 @@
 {
-  "name": "Mazda Infotainment Simulator",
+  "name": "casdk-simulator",
   "description": "The Custom Application SDK Simulator",
   "version": "0.0.2",
   "homepage": "http://flyandi.github.io/mazda-custom-application-sdk/",
@@ -18,7 +18,7 @@
     "grunt-build-atom-shell": "^2.1.1"
   },
   "scripts": {
-    "simulator": "electron ./src/simulator",
+    "simulator": "electron ./src/simulator/simulator.js",
     "clean": "rm -rf ./dist/simulator",
     "clean:osx": "rm -rf ./build/simulator/osx",
     "clean:win": "rm -rf ./build/simulator/win",
@@ -29,6 +29,5 @@
     "build:osx": "npm run pack:osx && electron-builder \"build/simulator/osx/Mazda Infotainment Simulator.app\" --platform=osx --out=\"dist/simulator/osx\" --config=builder.json",
     "build:win": "npm run pack:win && electron-builder \"build/simulator/win/Mazda Infotainment Simulator\" --platform=win --out=\"dist/simulator/win\" --config=builder.json"
   },
-  "license": "GPL-3.0",
-  "main"    : "./src/simulator/simulator.js"
+  "license": "GPL-3.0"
 }

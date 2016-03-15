@@ -39,8 +39,8 @@ var fs = require('fs'),
     Dialog = require('dialog'),
     mainWindow = null;
 
-// Start crash reporter
-require('crash-reporter').start();
+
+var APP_NAME = 'Simulator for Mazda Infotainment';
 
 /**
  * (Storage)
@@ -66,7 +66,7 @@ app.on('ready', function() {
   mainWindow = new BrowserWindow({
     width: 1280,
     height:755,
-    title: app.getName(),
+    title: APP_NAME,
     resizable: false,
     center: true,
     webPreferences: {
@@ -94,7 +94,7 @@ app.on('ready', function() {
 
 var BuildAppMenu = function() {
 
-  var appName = app.getName();
+  var appName = APP_NAME;
 
   var ApplicationMenu = [
     {
