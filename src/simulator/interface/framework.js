@@ -158,11 +158,12 @@ var framework = {
         document.body.appendChild(css);
 	},
 
-	loadJS: function(filename, callback) {
+	loadJS: function(filename, callback, errCallback) {
 		var script = document.createElement('script');
         script.type = 'text/javascript';
         script.src = filename;
         script.onload = callback;
+        script.onerror = errCallback || function(errObj) { Logger.error("Unable to load script source at " + filename); };
         document.body.appendChild(script);
 	},
 
